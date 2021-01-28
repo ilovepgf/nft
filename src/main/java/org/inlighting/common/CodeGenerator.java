@@ -1,4 +1,4 @@
-package org.inlighting.util;
+package org.inlighting.common;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -28,10 +28,10 @@ import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
  */
 public class CodeGenerator {
 
-    private static String url      = "jdbc:mysql://192.168.1.60:3306/cdc?useUnicode=true&useSSL=false&characterEncoding=utf8&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8";
+    private static String url      = "jdbc:mysql://52.82.53.216:3306/nft?useUnicode=true&useSSL=false&characterEncoding=utf8&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8";
     private static String drive    = "com.mysql.jdbc.Driver";
     private static String username = "root";
-    private static String password = "123456";
+    private static String password = "#huomu";
 
     /**
      * 
@@ -124,11 +124,11 @@ public class CodeGenerator {
         StrategyConfig strategy = new StrategyConfig();
         strategy.setNaming(NamingStrategy.underline_to_camel);
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
-        strategy.setSuperEntityClass("org.cdc.core.common.entity.DataEntity");
+//        strategy.setSuperEntityClass("org.cdc.core.common.entity.DataEntity");
         strategy.setEntityLombokModel(true);
         strategy.setRestControllerStyle(true);
         // 公共父类
-        strategy.setSuperControllerClass("org.cdc.core.common.controller.BaseController");
+//        strategy.setSuperControllerClass("org.cdc.core.common.controller.BaseController");
         // 写于父类中的公共字段
         strategy.setSuperEntityColumns("id");
         strategy.setInclude(tableName.split(","));
@@ -141,12 +141,12 @@ public class CodeGenerator {
     }
 
     public static void main(String[] args) {
-//        createCode("d:\\ok", "pugaofei", "sys", "sys_user");
+        createCode("d:\\ok", "pugaofei", "sys", "sys_user");
 //    	Date newDate = DateUtils.addMinutes(new Date(), 5);
 //		int nextInt = newDate.getHours();
 //		System.out.println(nextInt+"     "+newDate.getMinutes());
-        Object result = new SimpleHash("md5", password, ByteSource.Util.bytes(""), 1);
-        System.out.println(result.toString());
+//        Object result = new SimpleHash("md5", password, ByteSource.Util.bytes(""), 1);
+//        System.out.println(result.toString());
     }
 
 }

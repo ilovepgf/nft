@@ -1,4 +1,4 @@
-package org.inlighting.util;
+package org.inlighting.common;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;

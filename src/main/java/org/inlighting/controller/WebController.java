@@ -7,13 +7,12 @@ import org.apache.shiro.authz.annotation.*;
 import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.subject.Subject;
 import org.apache.shiro.util.ByteSource;
-import org.inlighting.bean.Msg;
-import org.inlighting.database.UserService;
 import org.inlighting.entity.User;
-import org.inlighting.database.UserBean;
-import org.inlighting.exception.UnauthorizedException;
+import org.inlighting.common.JWTUtil;
+import org.inlighting.common.Msg;
+import org.inlighting.common.entity.UserBean;
+import org.inlighting.common.exception.UnauthorizedException;
 import org.inlighting.service.IUserService;
-import org.inlighting.util.JWTUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -67,9 +66,9 @@ public class WebController {
         return Msg.returnObj(true, "You are visiting permission require edit,view", "", null);
     }
 
-    @RequestMapping(path = "/401")
-    @ResponseStatus(HttpStatus.UNAUTHORIZED)
-    public Msg unauthorized() {
-        return Msg.returnObj(false, "", "Unauthorized", null);
-    }
+//    @RequestMapping(path = "/401")
+//    @ResponseStatus(HttpStatus.UNAUTHORIZED)
+//    public Msg unauthorized() {
+//        return Msg.returnObj(false, "", "Unauthorized", null);
+//    }
 }

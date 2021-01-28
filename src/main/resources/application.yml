@@ -6,9 +6,9 @@ spring:
   swagger:
     enabled: true      
   datasource:
-    url: jdbc:mysql://${DATABASE_HOST:192.168.1.60}:${DATABASE_PORT:3306}/${DATABASE_NAME:cdc}?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8&rewriteBatchedStatements=true
+    url: jdbc:mysql://${DATABASE_HOST:52.82.53.216}:${DATABASE_PORT:3306}/${DATABASE_NAME:nft}?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8&rewriteBatchedStatements=true
     username: ${DATABASE_USERNAME:root}
-    password: ${DATABASE_PASSWORD:123456}
+    password: ${DATABASE_PASSWORD:#huomu}
     type: com.alibaba.druid.pool.DruidDataSource
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss

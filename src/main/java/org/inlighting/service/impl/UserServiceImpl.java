@@ -1,6 +1,6 @@
 package org.inlighting.service.impl;
 
-import org.inlighting.database.UserBean;
+import org.inlighting.common.entity.UserBean;
 import org.inlighting.entity.User;
 import org.inlighting.mapper.UserMapper;
 import org.inlighting.service.IUserService;
@@ -27,8 +27,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
 		User one = getOne(queryWrapper);
 		UserBean bean=new UserBean();
 		bean.setUsername(one.getLoginName());
-		bean.setPassword("e10adc3949ba59abbe56e057f20f883e");
-		bean.setRole("admin");
+		bean.setPassword(one.getPassword());
+		bean.setRole(one.getRole().toString());
 		bean.setPermission("view,edit");
 		return bean;
 	}

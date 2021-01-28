@@ -1,6 +1,6 @@
 package org.inlighting.service;
 
-import org.inlighting.database.UserBean;
+import org.inlighting.common.entity.UserBean;
 import org.inlighting.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 

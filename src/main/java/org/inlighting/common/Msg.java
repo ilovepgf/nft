@@ -1,4 +1,4 @@
-package org.inlighting.bean;
+package org.inlighting.common;
 
 
 public class Msg {

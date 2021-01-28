@@ -7,10 +7,9 @@ import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
-import org.inlighting.database.UserService;
+import org.inlighting.common.JWTUtil;
+import org.inlighting.common.entity.UserBean;
 import org.inlighting.service.IUserService;
-import org.inlighting.database.UserBean;
-import org.inlighting.util.JWTUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

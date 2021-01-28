@@ -1,4 +1,4 @@
-package org.inlighting.database;
+package org.inlighting.common.entity;
 
 public class UserBean {
     private String username;

@@ -1,8 +1,11 @@
 package org.inlighting.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.time.LocalDateTime;
+import java.util.Date;
+import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -13,102 +16,48 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author pugaofei
- * @since 2021-01-19
+ * @since 2021-01-28
  */
 @Data
+@EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @TableName("sys_user")
-public class User  {
+public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
-    @TableId
-    private Integer id;
+    @TableId(type = IdType.AUTO)
+    private Integer           id;
 
-    /**
-     * 登录名称
-     */
     private String loginName;
 
-    /**
-     * 密码
-     */
     private String password;
 
-    /**
-     * 盐
-     */
     private String salt;
 
-    /**
-     * 姓名
-     */
     private String name;
 
-    /**
-     * 角色Id
-     */
-    private Integer role;
+    private String nickName;
 
-    /**
-     * 身份证号码
-     */
     private String idCard;
 
-    /**
-     * 账号状态
-     */
     private String authState;
 
-    /**
-     * 社会信用代码证路径
-     */
+    private Integer role;
+
     private String photo;
 
-    /**
-     * 邮箱
-     */
     private String email;
 
-    /**
-     * 电话
-     */
     private String phone;
 
-    /**
-     * 组织名称
-     */
-    private String orgName;
+    private Date createDate;
 
-    /**
-     * 社会信用代码
-     */
-    private String orgCode;
+    private String descr;
 
-    /**
-     * 创建账号时间
-     */
-    private LocalDateTime createDate;
+    private Integer hots;
 
-    /**
-     * 是否是管理员创建
-     */
-    private String isAdminCreate;
-
-    /**
-     * 账号创建者登录名称
-     */
-    private String creator;
-
-    /**
-     * 是否上线
-     */
-    private String isOnline;
-
-    /**
-     * 运营相关人员部门
-     */
-    private String adminDepartName;
+    private Integer catalogId;
 
 
 }

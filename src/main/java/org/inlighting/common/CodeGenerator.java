@@ -141,7 +141,7 @@ public class CodeGenerator {
     }
 
     public static void main(String[] args) {
-        createCode("d:\\ok", "pugaofei", "sys", "sys_user");
+        createCode("d:\\ok", "pugaofei", "business", "business_order,business_nfts,business_mint,business_message,business_labels,business_cert,business_catalog");
 //    	Date newDate = DateUtils.addMinutes(new Date(), 5);
 //		int nextInt = newDate.getHours();
 //		System.out.println(nextInt+"     "+newDate.getMinutes());

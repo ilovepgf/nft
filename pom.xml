@@ -137,6 +137,18 @@
 			<artifactId>hutool-all</artifactId>
 			<version>4.5.11</version>
 		</dependency>
+			  <!-- 阿里云短信服务 -->
+	  <dependency>
+		  <groupId>com.aliyun</groupId>
+		  <artifactId>aliyun-java-sdk-core</artifactId>
+		  <version>4.1.0</version>
+	  </dependency>
+	  <dependency>
+		  <groupId>com.aliyun</groupId>
+		  <artifactId>aliyun-java-sdk-dysmsapi</artifactId>
+		  <version>1.0.0</version>
+	  </dependency>
+		
     </dependencies>
 
 

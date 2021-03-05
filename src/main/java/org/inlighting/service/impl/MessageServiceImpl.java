@@ -1,6 +1,6 @@
 package org.inlighting.service.impl;
 
-import org.inlighting.entity.Message;
+import org.inlighting.entity.po.Message;
 import org.inlighting.mapper.MessageMapper;
 import org.inlighting.service.IMessageService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

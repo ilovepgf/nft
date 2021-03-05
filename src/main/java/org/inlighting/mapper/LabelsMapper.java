@@ -1,6 +1,7 @@
 package org.inlighting.mapper;
 
-import org.inlighting.entity.Labels;
+import org.inlighting.entity.po.Labels;
+
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

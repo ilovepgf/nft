@@ -1,6 +1,7 @@
 package org.inlighting.mapper;
 
-import org.inlighting.entity.Nfts;
+import org.inlighting.entity.po.Nfts;
+
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

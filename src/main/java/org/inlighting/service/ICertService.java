@@ -1,6 +1,7 @@
 package org.inlighting.service;
 
-import org.inlighting.entity.Cert;
+import org.inlighting.entity.po.Cert;
+
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

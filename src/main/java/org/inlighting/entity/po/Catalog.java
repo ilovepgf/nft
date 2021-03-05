@@ -1,6 +1,4 @@
-package org.inlighting.entity;
-
-import java.math.BigDecimal;
+package org.inlighting.entity.po;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -12,9 +10,7 @@ import lombok.experimental.Accessors;
 
 /**
  * <p>
- * status锟斤拷1-锟斤拷锟斤拷耍锟?-锟斤拷锟酵?拷锟斤拷锟?-锟斤拷瞬锟酵?拷锟斤拷锟?-锟斤拷锟较架ｏ拷5-锟斤拷锟斤拷锟斤拷锟斤拷6-锟斤拷锟铰硷拷
-
-t
+ * 
  * </p>
  *
  * @author pugaofei
@@ -23,8 +19,8 @@ t
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("business_mint")
-public class Mint implements Serializable {
+@TableName("business_catalog")
+public class Catalog implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
@@ -33,17 +29,7 @@ public class Mint implements Serializable {
 
     private String name;
 
-    private String url;
-
-    private BigDecimal price;
-
-    private String status;
-
     private String descr;
-
-    private Integer totalNum;
-
-    private Integer availableNum;
 
 
 }

@@ -1,6 +1,6 @@
 package org.inlighting.service.impl;
 
-import org.inlighting.entity.Mint;
+import org.inlighting.entity.po.Mint;
 import org.inlighting.mapper.MintMapper;
 import org.inlighting.service.IMintService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

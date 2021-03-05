@@ -1,6 +1,7 @@
 package org.inlighting.service;
 
-import org.inlighting.entity.Order;
+import org.inlighting.entity.po.Order;
+
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

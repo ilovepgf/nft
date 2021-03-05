@@ -1,6 +1,6 @@
 package org.inlighting.service.impl;
 
-import org.inlighting.entity.Cert;
+import org.inlighting.entity.po.Cert;
 import org.inlighting.mapper.CertMapper;
 import org.inlighting.service.ICertService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

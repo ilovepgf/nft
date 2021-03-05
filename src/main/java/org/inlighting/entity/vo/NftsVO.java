@@ -1,4 +1,4 @@
-package org.inlighting.entity;
+package org.inlighting.entity.vo;
 
 import java.math.BigDecimal;
 
@@ -23,14 +23,10 @@ s
  * @since 2021-01-28
  */
 @Data
-@EqualsAndHashCode(callSuper = false)
-@Accessors(chain = true)
-@TableName("business_nfts")
-public class Nfts implements Serializable {
+public class NftsVO implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
-    @TableId(type = IdType.AUTO)
     private Integer           id;
 
     private String name;

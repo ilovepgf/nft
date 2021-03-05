@@ -1,6 +1,11 @@
 package org.inlighting.controller;
 
 
+import org.inlighting.common.Msg;
+import org.inlighting.entity.po.User;
+import org.inlighting.service.IUserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RestController;
@@ -16,5 +21,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/user")
 public class UserController  {
+	
+	@Autowired
+	IUserService userService;
 
+	@PostMapping("/detail")
+    public Msg detail(User po) {
+		Msg msg=userService.detail(po.getId());
+		return msg;
+	}
+	
+	@PostMapping("/relate")
+    public Msg relate(User po) {
+		Msg msg=userService.relate(po.getId());
+		return msg;
+	}
 }

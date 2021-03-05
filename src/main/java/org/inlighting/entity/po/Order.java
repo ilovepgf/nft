@@ -1,4 +1,4 @@
-package org.inlighting.entity;
+package org.inlighting.entity.po;
 
 import java.math.BigDecimal;
 

@@ -1,6 +1,6 @@
 package org.inlighting.service.impl;
 
-import org.inlighting.entity.Order;
+import org.inlighting.entity.po.Order;
 import org.inlighting.mapper.OrderMapper;
 import org.inlighting.service.IOrderService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

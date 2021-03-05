@@ -1,6 +1,8 @@
 package org.inlighting.service;
 
-import org.inlighting.entity.Catalog;
+import org.inlighting.common.Msg;
+import org.inlighting.entity.po.Catalog;
+
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -12,5 +14,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2021-01-28
  */
 public interface ICatalogService extends IService<Catalog> {
+
+	Msg catalogs();
 
 }

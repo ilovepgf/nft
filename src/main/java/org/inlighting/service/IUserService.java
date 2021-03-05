@@ -1,7 +1,10 @@
 package org.inlighting.service;
 
+import org.inlighting.common.Msg;
 import org.inlighting.common.entity.UserBean;
-import org.inlighting.entity.User;
+import org.inlighting.entity.po.User;
+import org.inlighting.entity.query.UserQuery;
+
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -15,5 +18,13 @@ import com.baomidou.mybatisplus.extension.service.IService;
 public interface IUserService extends IService<User> {
 
 	UserBean getUser(String username);
+
+	Msg arties(UserQuery query);
+
+	Msg hots();
+
+	Msg detail(Integer id);
+
+	Msg relate(Integer id);
 
 }

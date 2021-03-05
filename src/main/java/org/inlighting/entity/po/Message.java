@@ -1,4 +1,4 @@
-package org.inlighting.entity;
+package org.inlighting.entity.po;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -12,7 +12,8 @@ import lombok.experimental.Accessors;
 
 /**
  * <p>
- * auth_state:0-未锟斤拷证锟斤拷1-锟斤拷证通锟斤拷锟斤拷2-锟斤拷证锟斤拷通锟斤拷
+ * status锟斤拷1-未锟斤拷锟斤拷2-锟窖讹拷
+type:1-锟斤拷锟斤拷锟斤拷息锟斤拷2-系统通知锟斤拷3-锟斤拷锟斤拷锟斤拷息
  * </p>
  *
  * @author pugaofei
@@ -21,43 +22,25 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("sys_user")
-public class User implements Serializable {
+@TableName("business_message")
+public class Message implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
     @TableId(type = IdType.AUTO)
     private Integer           id;
 
-    private String loginName;
+    private String type;
 
-    private String password;
-
-    private String salt;
-
-    private String name;
-
-    private String nickName;
-
-    private String idCard;
-
-    private String authState;
-
-    private Integer role;
-
-    private String photo;
-
-    private String email;
-
-    private String phone;
+    private Integer userId;
 
     private Date createDate;
 
+    private String status;
+
+    private String content;
+
     private String descr;
-
-    private Integer hots;
-
-    private Integer catalogId;
 
 
 }

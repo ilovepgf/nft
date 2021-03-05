@@ -1,6 +1,11 @@
 package org.inlighting.mapper;
 
-import org.inlighting.entity.User;
+import java.util.List;
+
+import org.apache.ibatis.annotations.Select;
+import org.inlighting.entity.po.Labels;
+import org.inlighting.entity.po.User;
+
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
@@ -12,5 +17,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @since 2021-01-19
  */
 public interface UserMapper extends BaseMapper<User> {
+
+	@Select("SELECT bl.* FROM business_user_label bul,business_labels bl where bul.label_id=bl.id and bul.user_id =#{id}")
+	List<Labels> getLabelsByUserId(Integer id);
 
 }

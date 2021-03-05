@@ -148,7 +148,12 @@
 		  <artifactId>aliyun-java-sdk-dysmsapi</artifactId>
 		  <version>1.0.0</version>
 	  </dependency>
-		
+			<!-- 对象间的转换 -->
+		<dependency>
+			<groupId>net.sf.dozer</groupId>
+			<artifactId>dozer</artifactId>
+			<version>5.5.1</version>
+		</dependency>	
     </dependencies>
 
 

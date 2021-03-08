@@ -9,6 +9,7 @@ import org.apache.shiro.subject.Subject;
 import org.apache.shiro.util.ByteSource;
 import org.inlighting.common.JWTUtil;
 import org.inlighting.common.Msg;
+import org.inlighting.common.UserUtils;
 import org.inlighting.common.entity.UserBean;
 import org.inlighting.common.exception.UnauthorizedException;
 import org.inlighting.entity.po.User;
@@ -42,6 +43,7 @@ public class WebController {
     public Msg article() {
         Subject subject = SecurityUtils.getSubject();
         if (subject.isAuthenticated()) {
+        	User user = UserUtils.getUser();
             return Msg.returnObj(true, "You are already logged in", "", null);
         } else {
             return Msg.returnObj(true, "You are guest", "", null);
